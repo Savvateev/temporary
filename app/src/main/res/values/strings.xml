@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NMedia</string>
+    <string name="nmedia">NMedia!</string>
+    <string name="avatar_text">Netology. University of online profesions</string>
+    <string name="avatar_date">may 21 06:36 am</string>
+    <string name="postText" translatable="false">Привет, это новая Нетология!\nКогда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов.\nНо самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен →</string>
+    <string name="netologyLink" translatable="false" textcolor="3914AF">http://netology.gy/fyb</string>
+    <string name="countOfLikes" translatable="false">10</string>
+    <string name="countOfshares" translatable="false">5</string>
+    <string name="countOfViews" translatable="false">5</string>
+</resources>

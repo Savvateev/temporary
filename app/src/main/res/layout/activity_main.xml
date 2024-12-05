@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/netology_original" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/published"
+        app:layout_constraintEnd_toStartOf="@id/ButtonImage"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        android:layout_marginStart="16dp"
+        android:text="@string/avatar_text" />
+
+    <TextView
+        android:id="@+id/published"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:barrierDirection="bottom"
+        android:layout_marginStart="16dp"
+        android:text="@string/avatar_date" />
+
+    <ImageView
+        android:id="@+id/ButtonImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/baseline_more_vert_24"
+        tools:layout_editor_absoluteX="348dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/PostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/postText"
+        app:barrierDirection="top"
+        app:layout_constraintWidth="wrap_content_constrained"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/ButtonImage"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/linkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/PostTextView"
+        app:layout_constraintTop_toBottomOf="@id/PostTextView"
+        android:text="@string/netologyLink"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <ImageView
+        android:id="@+id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardview_default_elevation"
+        app:barrierDirection="bottom"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/linkView"
+        app:srcCompat="@drawable/baseline_favorite_border_24"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <ImageView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/likes"
+        app:layout_constraintTop_toTopOf="@id/likes"
+        app:layout_constraintStart_toEndOf="@id/countOfLikesView"
+        app:srcCompat="@drawable/baseline_share_24"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <TextView
+        android:id="@+id/countOfVView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/share"
+        app:layout_constraintTop_toTopOf="@id/share"
+        app:layout_constraintEnd_toEndOf="@id/ButtonImage"
+        android:text="@string/countOfViews"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <ImageView
+        android:id="@+id/Views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/countOfVView"
+        app:layout_constraintTop_toTopOf="@id/countOfVView"
+        app:layout_constraintEnd_toStartOf="@+id/countOfVView"
+        app:srcCompat="@drawable/baseline_remove_red_eye_24"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/countOfLikesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/likes"
+        app:layout_constraintTop_toTopOf="@id/likes"
+        app:layout_constraintStart_toEndOf="@id/likes"
+        android:text="@integer/countOfLikes"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/countOfSharesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/likes"
+        app:layout_constraintTop_toTopOf="@id/likes"
+        app:layout_constraintStart_toEndOf="@id/share"
+        android:text="@string/countOfshares"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
